@@ -1,0 +1,14 @@
+jdk:
+  - openjdk9
+before_install:
+   - echo ./custom_setup.sh
+install:
+   - echo "Running a custom install command"
+   - echo "VERSION:${version}"
+   - mkdir -p ~/.m2/repository/com/github/jitpack/blescan2021/${VERSION}
+   - cp blesanlib-1.1.5.aar ~/.m2/repository/com/github/jitpack/blescan2021/${VERSION}/blescan2021-${VERSION}.aar 
+   - echo "<version>${VERSION}</version></project>" >> jsplayersdk.pom
+   - cp blesanlib-1.1.5.pom ~/.m2/repository/com/github/jitpack/blescan2021/${VERSION}/blescan2021-${VERSION}.pom
+
+env:
+   MYVAR: "custom environment variable"
