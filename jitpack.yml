@@ -5,10 +5,10 @@ before_install:
 install:
    - echo "Running a custom install command"
    - echo "VERSION:${version}"
-   - mkdir -p ~/.m2/repository/com/github/jitpack/blescan2021/${VERSION}
-   - cp blesanlib-1.1.5.aar ~/.m2/repository/com/github/jitpack/blescan2021/${VERSION}/blescan2021-${VERSION}.aar 
+   - mkdir -p ~/.m2/repository/com/poilabs/blescan/blescanlib/${VERSION}
+   - cp blesanlib-1.1.5.aar ~/.m2/repository/com/poilabs/blescan/blescanlib/${VERSION}/blescan2021-${VERSION}.aar
    - echo "<version>${VERSION}</version></project>" >> blesanlib-1.1.5.pom
-   - cp blesanlib-1.1.5.pom ~/.m2/repository/com/github/jitpack/blescan2021/${VERSION}/blescan2021-${VERSION}.pom
+   - cp blesanlib-1.1.5.pom ~/.m2/repository/com/poilabs/blescan/blescanlib/${VERSION}/blescan2021-${VERSION}.pom
 
 env:
    MYVAR: "custom environment variable"
